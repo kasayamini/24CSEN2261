@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+    char gender;
+    float height;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    printf("Enter your gender (M for Male, F for Female): ");
+    scanf(" %c", &gender); 
+
+    printf("Enter your height in meters: ");
+    scanf("%f", &height);
+
+    printf("\n--- User Information ---\n");
+    printf("Age: %d years\n", age);
+    if (gender == 'M' || gender == 'm') {
+        printf("Gender: Male\n");
+    } else if (gender == 'F' || gender == 'f') {
+        printf("Gender: Female\n");
+    } else {
+        printf("Gender: Unknown\n");
+    }
+    printf("Height: %.2f meters\n", height);
+
+    return 0;
+}
