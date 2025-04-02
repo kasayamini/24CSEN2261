@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Student {
+    char name[50];
+    int age;
+    float marks[5];
+};
+
+float calculateAverage(struct Student s) {
+    float sum = 0;
+    for (int i = 0; i < 5; i++) {
+        sum += s.marks[i];
+    }
+    return sum / 5;
+}
+
+int main() {
+    struct Student student1; 
+ 
+    printf("Enter student name: ");
+    fgets(student1.name, sizeof(student1.name), stdin);
+    student1.name[strcspn(student1.name, "\n")] = '\0';  
+    
+    printf("Enter student age: ");
+    scanf("%d", &student1.age);
+
+    printf("Enter marks for 5 subjects: \n");
+    for (int i = 0; i < 5; i++) {
+        printf("Subject %d: ", i + 1);
+        scanf("%f", &student1.marks[i]);
+    }
+
+    float average = calculateAverage(student1);
+
+    printf("\nStudent Details:\n");
+    printf("Name: %s\n", student1.name);
+    printf("Age: %d\n", student1.age);
+    printf("Marks: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%.2f ", student1.marks[i]);
+    }
+    printf("\nAverage Marks: %.2f\n", average);
+
+    return 0;
+}
+
+
+
+OUTPUT :
+Enter student name: Yamini
+Enter student age: 18
+Enter marks for 5 subjects:
+Subject 1: 10
+Subject 2: 20
+Subject 3: 30
+Subject 4: 40
+Subject 5: 50
+
+Student Details:
+Name: Yamini
+Age: 18
+Marks: 10.00 20.00 30.00 40.00 50.00 
+Average Marks: 30.00
