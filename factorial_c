@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+long long factorial_recursive(int n) {
+    if (n == 0) {
+        return 1; 
+    } else {
+        return n * factorial_recursive(n - 1); 
+    }
+}
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        long long result = factorial_recursive(num);
+        printf("Factorial of %d (recursive) is: %lld\n", num, result);
+    }
+
+    return 0;
+}
+
+
+
+OUTPUT :
+Enter a number: 5
+Factorial of 5 (recursive) is: 120
