@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int sumArray(int *arr, int size) {
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += *(arr + i); 
+    }
+    return sum;
+}
+
+int main() {
+    int num = 10;
+    int *ptr = &num;  
+    printf("Value of num: %d\n", *ptr);  
+
+    *ptr = 20;
+    printf("New value of num after modification: %d\n", num);
+
+    int arr[] = {1, 2, 3, 4, 5};
+    int *arrPtr = arr; 
+
+    printf("\nArray elements using pointer arithmetic:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("Element %d: %d\n", i + 1, *(arrPtr + i));
+    }
+
+    int sum = sumArray(arr, 5);
+    printf("\nSum of array elements: %d\n", sum);
+
+    int x = 5, y = 10;
+    printf("\nBefore swapping: x = %d, y = %d\n", x, y);
+    swap(&x, &y); 
+    printf("After swapping: x = %d, y = %d\n", x, y);
+
+    return 0;
+}
+
+
+
+OUTPUT :
+Value of num: 10
+New value of num after modification: 20
+
+Array elements using pointer arithmetic:
+Element 1: 1
+Element 2: 2
+Element 3: 3
+Element 4: 4
+Element 5: 5
+
+Sum of array elements: 15
+
+Before swapping: x = 5, y = 10
+After swapping: x = 10, y = 5
