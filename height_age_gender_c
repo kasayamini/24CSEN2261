@@ -23,6 +23,18 @@ int main() {
     } else {
         printf("Gender: Unknown\n");
     }
+
+
+OUTPUT:
+Enter your age: 25
+Enter your gender (M for Male, F for Female): M
+Enter your height in meters: 1.75
+
+--- User Information ---
+Age: 25 years
+Gender: Male
+Height: 1.75 meters
+
     printf("Height: %.2f meters\n", height);
 
     return 0;
