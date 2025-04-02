@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int intVar = 10;
+    float floatVar = 5.75;
+    double doubleVar = 3.14159;
+    char charVar = 'A';
+    long longVar = 1234567890;
+    short shortVar = 32000;
+    
+    printf("Integer value: %d\n", intVar);
+    printf("Float value: %.2f\n", floatVar); 
+    printf("Double value: %.5f\n", doubleVar);
+    printf("Character value: %c\n", charVar);
+    printf("Long integer value: %ld\n", longVar);
+    printf("Short integer value: %hd\n", shortVar);
+    
+    return 0;
+}
+
+
+
+OUTPUT :
+Integer value: 10
+Float value: 5.75
+Double value: 3.14159
+Character value: A
+Long integer value: 1234567890
+Short integer value: 32000
