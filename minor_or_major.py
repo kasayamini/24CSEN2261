@@ -1,21 +1,15 @@
-name = "Alice"
-age = 25
+name = input("Please enter your name: ")
 
-print("Hello, " + name + "! You are " + str(age) + " years old.")
+age = int(input("Please enter your age: "))
 
 if age >= 18:
-    print(name + " is an adult.")
+    print(name + ", you are an adult (major).")
 else:
-    print(name + " is a minor.")
+    print(name + ", you are a minor.")
 
-for i in range(1, 6):
-    print(i)
 
-while age > 0:
-    print(age)
-    age -= 1  # Decrease age by 1 each time
 
-def greet(person):
-    print("Hi, " + person + "!")
-
-greet(name)
+OUTPUT :
+Please enter your name: Yamini
+Please enter your age: 18
+Yamini, you are an adult (major).
